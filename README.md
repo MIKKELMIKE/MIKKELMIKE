@@ -8,7 +8,6 @@ Soy estudiante de 5to Semestre de Ingeniería de Software (a punto de estadías)
 
 *   Actualmente desarrollando: Aplicaciones SPA y Dashboards con React y TypeScript.
 *   Aprendiendo: Arquitectura Limpia, Gestión de Estado (Zustand/Redux) y Diseño en Sistemas.
-*   Buscando: **Estadías Profesionales** (Prácticas) como Frontend o Full-Stack Developer junior.
 *   Contáctame: [sergiomiche.mc@gmail.com](mailto:sergiomiche.mc@gmail.com)
 
 ---
@@ -30,6 +29,6 @@ Soy estudiante de 5to Semestre de Ingeniería de Software (a punto de estadías)
 ### Estadísticas (Mis commits y actividad)
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MIKKELMIKE&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&locale=es" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MIKKELMIKE&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MIKKELMIKE&show_icons=true&hide_border=true&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff&locale=es" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MIKKELMIKE&layout=compact&hide_border=true&bg_color=000000&title_color=ffffff&text_color=ffffff" height="160" />
 </div>
