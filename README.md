@@ -22,17 +22,3 @@ Soy estudiante de 5to Semestre de Ingeniería de Software (a punto de estadías)
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
   <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" />
-</p>
-
----
-
-### Estadísticas (Mis commits y actividad)
-
-<p align="center">
-  <a href="https://github.com/MIKKELMIKE">
-    <img src="https://github-readme-stats.vercel.app/api?username=MIKKELMIKE&show_icons=true&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff&hide_border=true" height="150" alt="GitHub Stats" />
-  </a>
-  <a href="https://github.com/MIKKELMIKE">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MIKKELMIKE&layout=compact&bg_color=000000&title_color=ffffff&text_color=ffffff&hide_border=true" height="150" alt="Top Langs" />
-  </a>
-</p>
