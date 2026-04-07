@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=1a237e&height=200&section=header&text=¡Hola!%20Soy%20Mich&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Software%20Junior%20Dev&descAlignY=55&descAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=000000&fontColor=ffffff&height=200&section=header&text=¡Hola!%20Soy%20Mich&fontSize=50&animation=fadeIn&fontAlignY=38&desc=Software%20Junior%20Dev&descAlignY=55&descAlign=50" />
 </div>
 
 ### Sobre Mí
@@ -30,6 +30,6 @@ Soy estudiante de 5to Semestre de Ingeniería de Software (a punto de estadías)
 ### Estadísticas (Mis commits y actividad)
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MIKKELMIKE&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MIKKELMIKE&theme=tokyonight&hide_border=true&background=0D1117" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MIKKELMIKE&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&locale=es" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MIKKELMIKE&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" height="160" />
 </div>
