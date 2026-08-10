@@ -4,7 +4,7 @@
 
 ### Sobre Mí
 
-Soy estudiante de 5to Semestre de Ingeniería de Software (a punto de estadías). Me apasiona el Desarrollo Web y la creación de interfaces interactivas funcionales y elegantes.
+Soy estudiante de 7mo Semestre de Ingeniería de Software (a punto de estadías). Me apasiona el Desarrollo Web y la creación de interfaces interactivas funcionales y elegantes.
 
 *   Actualmente desarrollando: Aplicaciones SPA y Dashboards con React y TypeScript.
 *   Aprendiendo: Arquitectura Limpia, Gestión de Estado (Zustand/Redux) y Diseño en Sistemas.
