@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hoja simple de conceptos de LLM. Fondo blanco; el único color es el logo UTNA."""
+"""Dos hojas: portada en blanco y una tabla de conceptos. El único color es el logo UTNA."""
 
 from pathlib import Path
 
@@ -13,6 +13,7 @@ from reportlab.platypus import (
     BaseDocTemplate,
     Frame,
     Image,
+    PageBreak,
     PageTemplate,
     Paragraph,
     Spacer,
@@ -22,12 +23,10 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parent
 ASSETS = ROOT / "assets"
-OUT = ROOT / "Conceptos_LLM_Fundamentos_IA.pdf"
+OUT = ROOT / "Portada_y_tabla_LLM.pdf"
 FONT_DIR = Path("/usr/share/fonts/truetype/liberation")
 
 PAGE_W, PAGE_H = letter
-INK = black
-RULE = black
 
 
 def register_fonts() -> None:
@@ -40,138 +39,116 @@ def styles() -> dict[str, ParagraphStyle]:
         "school": ParagraphStyle(
             "School",
             fontName="Sans",
-            fontSize=9,
-            leading=12,
-            textColor=INK,
+            fontSize=10,
+            leading=13,
+            textColor=black,
             alignment=TA_CENTER,
-            spaceAfter=1,
+            spaceAfter=2,
         ),
         "title": ParagraphStyle(
             "Title",
             fontName="Sans-Bold",
-            fontSize=14,
-            leading=17,
-            textColor=INK,
+            fontSize=16,
+            leading=20,
+            textColor=black,
             alignment=TA_CENTER,
-            spaceBefore=8,
-            spaceAfter=2,
+            spaceBefore=16,
+            spaceAfter=4,
         ),
         "subject": ParagraphStyle(
             "Subject",
             fontName="Sans",
-            fontSize=11,
-            leading=14,
-            textColor=INK,
+            fontSize=12,
+            leading=15,
+            textColor=black,
             alignment=TA_CENTER,
-            spaceAfter=8,
+            spaceAfter=16,
         ),
         "meta": ParagraphStyle(
             "Meta",
             fontName="Sans",
+            fontSize=12,
+            leading=18,
+            textColor=black,
+            alignment=TA_CENTER,
+        ),
+        "sheet_title": ParagraphStyle(
+            "SheetTitle",
+            fontName="Sans-Bold",
+            fontSize=14,
+            leading=18,
+            textColor=black,
+            alignment=TA_CENTER,
+            spaceAfter=2,
+        ),
+        "sheet_sub": ParagraphStyle(
+            "SheetSub",
+            fontName="Sans",
             fontSize=10,
             leading=13,
-            textColor=INK,
+            textColor=black,
             alignment=TA_CENTER,
-            spaceAfter=1,
-        ),
-        "intro": ParagraphStyle(
-            "Intro",
-            fontName="Sans",
-            fontSize=9.5,
-            leading=12.5,
-            textColor=INK,
-            alignment=TA_LEFT,
-            spaceBefore=8,
-            spaceAfter=8,
+            spaceAfter=14,
         ),
         "th": ParagraphStyle(
             "Th",
             fontName="Sans-Bold",
-            fontSize=10,
-            leading=13,
-            textColor=INK,
+            fontSize=12,
+            leading=15,
+            textColor=black,
             alignment=TA_LEFT,
         ),
         "name": ParagraphStyle(
             "Name",
             fontName="Sans-Bold",
-            fontSize=10,
-            leading=13,
-            textColor=INK,
+            fontSize=12,
+            leading=15,
+            textColor=black,
         ),
         "td": ParagraphStyle(
             "Td",
             fontName="Sans",
-            fontSize=10,
-            leading=13,
-            textColor=INK,
+            fontSize=12,
+            leading=15,
+            textColor=black,
         ),
     }
 
 
 def concepts_table(s: dict[str, ParagraphStyle]) -> Table:
-    headers = ["Concepto", "En español", "Qué es"]
+    headers = ["Concepto", "Palabra en español", "Qué quiere decir"]
     rows = [
-        [
-            "Token",
-            "Pedazo de texto",
-            "Parte el texto en pedazos para que el modelo lo lea. Puede ser una palabra, un trozo o un signo. «Jugando» a veces queda como «jug» y «ando».",
-        ],
-        [
-            "Embedding",
-            "Vector",
-            "Convierte cada pedazo en números que guardan su significado. «Perro» y «gato» quedan cerca. «Perro» y «teclado» quedan lejos.",
-        ],
-        [
-            "Transformer",
-            "Transformador",
-            "Es la estructura del modelo. Relaciona las partes del texto entre sí, en lugar de leerlas solo una por una.",
-        ],
-        [
-            "Encoder",
-            "Codificador",
-            "Lee toda la entrada y arma lo que significa. BERT trabaja así. Sirve para entender o clasificar, no para escribir la respuesta.",
-        ],
-        [
-            "Decoder",
-            "Decodificador",
-            "Escribe la respuesta pedazo por pedazo. GPT trabaja así. Solo puede ver lo que ya escribió.",
-        ],
-        [
-            "Attention",
-            "Atención",
-            "Decide qué palabras mirar más. En «la llave del carro», al leer «llave» se fija en «carro» para saber de cuál se habla.",
-        ],
-        [
-            "Fine-Tuning",
-            "Ajuste fino",
-            "Se entrena un poco más un modelo que ya sabe, con ejemplos de una tarea. No es lo mismo que solo ponerle una instrucción.",
-        ],
+        ["Token", "Pedazo de texto", "Parte el texto en pedazos."],
+        ["Embedding", "Vector", "Números que guardan el significado."],
+        ["Transformer", "Transformador", "La estructura del modelo."],
+        ["Encoder", "Codificador", "La parte que lee y entiende."],
+        ["Decoder", "Decodificador", "La parte que escribe la respuesta."],
+        ["Attention", "Atención", "Decide qué palabras mirar."],
+        ["Fine-Tuning", "Ajuste fino", "Entrenar un poco más un modelo que ya sabe."],
     ]
     data = [[Paragraph(header, s["th"]) for header in headers]]
-    for concept, spanish, meaning in rows:
+    for concept, word, meaning in rows:
         data.append(
             [
                 Paragraph(concept, s["name"]),
-                Paragraph(spanish, s["name"]),
+                Paragraph(word, s["name"]),
                 Paragraph(meaning, s["td"]),
             ]
         )
-    table = Table(data, colWidths=[88, 108, 326])
+    table = Table(data, colWidths=[110, 150, 268])
     table.setStyle(
         TableStyle(
             [
                 ("BACKGROUND", (0, 0), (-1, -1), white),
-                ("TEXTCOLOR", (0, 0), (-1, -1), INK),
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 6),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 6),
-                ("TOPPADDING", (0, 0), (-1, -1), 12),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
-                ("LINEBELOW", (0, 0), (-1, 0), 1, RULE),
-                ("LINEBELOW", (0, 1), (-1, -2), 0.3, RULE),
-                ("LINEBELOW", (0, -1), (-1, -1), 0.6, RULE),
-                ("LINEABOVE", (0, 0), (-1, 0), 0.6, RULE),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("LEFTPADDING", (0, 0), (-1, -1), 8),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 8),
+                ("TOPPADDING", (0, 0), (-1, -1), 28),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 28),
+                ("LINEABOVE", (0, 0), (-1, 0), 1, black),
+                ("LINEBELOW", (0, 0), (-1, 0), 1, black),
+                ("LINEBELOW", (0, 1), (-1, -2), 0.4, black),
+                ("LINEBELOW", (0, -1), (-1, -1), 1, black),
             ]
         )
     )
@@ -181,27 +158,28 @@ def concepts_table(s: dict[str, ParagraphStyle]) -> Table:
 def build_story(s: dict[str, ParagraphStyle]) -> list:
     logo = Image(
         str(ASSETS / "logo-utna.png"),
-        width=188,
-        height=188 * (126 / 350),
+        width=210,
+        height=210 * (126 / 350),
         mask="auto",
     )
     logo.hAlign = "CENTER"
     return [
-        Spacer(1, 6),
+        Spacer(1, 150),
         logo,
-        Spacer(1, 8),
+        Spacer(1, 14),
         Paragraph("UNIVERSIDAD TECNOLÓGICA DEL NORTE DE AGUASCALIENTES", s["school"]),
         Paragraph("Rincón de Romos, Aguascalientes", s["school"]),
         Paragraph("Conceptos relacionados con LLM", s["title"]),
         Paragraph("Fundamentos de Inteligencia Artificial", s["subject"]),
         Paragraph("Alumno: Sergio Michell Carreón López", s["meta"]),
         Paragraph("Docente: Mtro. Gerardo Martínez", s["meta"]),
-        Paragraph("Grupo 7A · Carrera ITIID · 6 de octubre de 2026", s["meta"]),
-        Paragraph(
-            "Un LLM es un programa que aprendió con mucho texto y puede contestar o redactar. "
-            "En la tabla están los conceptos de la clase, el nombre en español y qué hace cada uno.",
-            s["intro"],
-        ),
+        Paragraph("Grupo: 7A", s["meta"]),
+        Paragraph("Carrera: ITIID", s["meta"]),
+        Paragraph("6 de octubre de 2026", s["meta"]),
+        PageBreak(),
+        Spacer(1, 28),
+        Paragraph("Conceptos relacionados con LLM", s["sheet_title"]),
+        Paragraph("Sergio Michell Carreón López · Grupo 7A", s["sheet_sub"]),
         concepts_table(s),
     ]
 
@@ -218,8 +196,8 @@ def main() -> None:
         creator="Sergio Michell Carreón López",
         leftMargin=42,
         rightMargin=42,
-        topMargin=32,
-        bottomMargin=32,
+        topMargin=36,
+        bottomMargin=36,
     )
     frame = Frame(
         doc.leftMargin,
