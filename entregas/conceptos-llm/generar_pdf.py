@@ -118,13 +118,41 @@ def styles() -> dict[str, ParagraphStyle]:
 def concepts_table(s: dict[str, ParagraphStyle]) -> Table:
     headers = ["Concepto", "Palabra en español", "Qué quiere decir"]
     rows = [
-        ["Token", "Pedazo de texto", "Parte el texto en pedazos."],
-        ["Embedding", "Vector", "Números que guardan el significado."],
-        ["Transformer", "Transformador", "La estructura del modelo."],
-        ["Encoder", "Codificador", "La parte que lee y entiende."],
-        ["Decoder", "Decodificador", "La parte que escribe la respuesta."],
-        ["Attention", "Atención", "Decide qué palabras mirar."],
-        ["Fine-Tuning", "Ajuste fino", "Entrenar un poco más un modelo que ya sabe."],
+        [
+            "Token",
+            "Pedazo de texto",
+            "Parte el texto en pedazos para que el modelo pueda leerlo. Un pedazo puede ser una palabra, un trozo o un signo.",
+        ],
+        [
+            "Embedding",
+            "Vector",
+            "Convierte cada pedazo en números que guardan su significado. Palabras parecidas, como perro y gato, quedan cerca.",
+        ],
+        [
+            "Transformer",
+            "Transformador",
+            "Es la estructura del modelo. Relaciona las partes del texto entre sí, en lugar de leerlas solo una por una.",
+        ],
+        [
+            "Encoder",
+            "Codificador",
+            "Es la parte que lee toda la entrada y entiende de qué trata. No se encarga de escribir la respuesta.",
+        ],
+        [
+            "Decoder",
+            "Decodificador",
+            "Es la parte que escribe la respuesta, pedazo por pedazo. Solo puede ver lo que ya escribió.",
+        ],
+        [
+            "Attention",
+            "Atención",
+            "Decide qué palabras mirar más en cada momento. En «la llave del carro», al leer «llave» se fija en «carro».",
+        ],
+        [
+            "Fine-Tuning",
+            "Ajuste fino",
+            "Es entrenar un poco más un modelo que ya sabe, con ejemplos de una tarea. No es lo mismo que solo ponerle una instrucción.",
+        ],
     ]
     data = [[Paragraph(header, s["th"]) for header in headers]]
     for concept, word, meaning in rows:
@@ -143,8 +171,8 @@ def concepts_table(s: dict[str, ParagraphStyle]) -> Table:
                 ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                 ("LEFTPADDING", (0, 0), (-1, -1), 8),
                 ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-                ("TOPPADDING", (0, 0), (-1, -1), 28),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 28),
+                ("TOPPADDING", (0, 0), (-1, -1), 14),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 14),
                 ("LINEABOVE", (0, 0), (-1, 0), 1, black),
                 ("LINEBELOW", (0, 0), (-1, 0), 1, black),
                 ("LINEBELOW", (0, 1), (-1, -2), 0.4, black),
