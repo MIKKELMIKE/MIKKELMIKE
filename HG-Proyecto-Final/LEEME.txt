@@ -1,0 +1,72 @@
+HG PROYECTO FINAL — BLOQUE
+Habilidades gerenciales
+Profesor: Winston Spenser
+Carrera: Ingeniería de Software
+
+Equipo
+- Emmanuel López Castillo — Dirección
+- Xitlali Margarita Torres Salas — Operación y control
+- Dominick Hammurabi Salazar Mendoza — Cuentas y negociación
+- Sergio Michell Carreón López — Ingeniería
+
+El estudio se llama BLOQUE. Eslogan: Menos ruido. Más sistema.
+Las cifras son simuladas. Abarrotes Luna es un caso ficticio.
+
+CÓMO SE ENTREGA
+
+Hoy, lunes 23 de noviembre de 2026. Avance 1, de la idea.
+Carpeta avance-1. Apartados 1 a 3: identidad, planeación estratégica y proceso administrativo.
+- HG-Avance-1-Presentacion.pdf   láminas para proyectar
+- HG-Avance-1.pdf                 informe
+- HG-Avance-1.docx                el mismo informe en Word
+- presentacion.html               las mismas láminas, si se abre en el navegador
+
+Miércoles 25 de noviembre de 2026. Avance 2, a la acción.
+Carpeta avance-2. Apartados 4 a 8: conflicto, negociación, decisión, dramatización y conclusiones.
+- HG-Avance-2-Presentacion.pdf
+- HG-Avance-2.pdf
+- HG-Avance-2.docx
+- presentacion.html
+- dramatizacion.html              guion en letra grande, para ensayar. El mismo diálogo va dentro del informe.
+
+La marca (isotipo y logotipo) está en la carpeta marca.
+
+QUIÉN HABLA EN EL AVANCE 1
+01 Portada — Emmanuel
+02 Equipo — los cuatro, cada quien su puesto
+03 Servicio y problema — Sergio
+04 Público y caso Luna — Dominick
+05 Carrera — Xitlali
+06 Misión y visión — Emmanuel
+07 Valores — los cuatro, un valor cada quien
+08 Objetivos — Xitlali
+09 FODA — Sergio
+10 Metas — Dominick
+11 Estrategias — Emmanuel
+12 Planeación — Xitlali
+13 Organigrama — Emmanuel
+14 Puestos — los cuatro, cada quien su línea
+15 Dirección y control — Emmanuel y Xitlali
+16 Cierre — Dominick
+
+QUIÉN HABLA EN EL AVANCE 2
+01 Portada — Emmanuel
+02 El caso — Dominick
+03 Lo firmado — Xitlali
+04 Qué pasó — Sergio
+05 Tipo, causas y etapa — Xitlali
+06 Consecuencias — Dominick
+07 Intereses — Emmanuel
+08 Método — Emmanuel
+09 Dos alternativas — Sergio
+10 Acuerdo — Emmanuel
+11 La otra decisión — Sergio
+12 Comparación — Xitlali
+13 Decisión — Sergio
+14 Plan e indicador — Xitlali
+15 Dramatización — los cuatro, en la representación (3 a 4 minutos)
+16 Conclusiones — los cuatro, una cada quien
+17 Cierre — Emmanuel
+
+La dramatización no se lee. Se representa con una mesa, la hoja de alcance y la bitácora.
+El orden y las técnicas están en dramatizacion.html.
