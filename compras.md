@@ -86,3 +86,26 @@ Pasar el enlace por aquí antes de pagar. Hace falta todo esto:
 6. Publicación nacional, con devolución. Las que dicen “para partes”, “no enciende” o “internacional” se dejan pasar.
 
 Sin la foto de la etiqueta, el anuncio de $980 y el de $1,900 se quedan en espera.
+
+## Auditoría 2026-11-23 — gabinete de Mercado Libre
+
+Publicación vista en captura a las 23:30 (Ciudad de México). Enlace corto del chat: [meli.la/1nnCXqW](https://meli.la/1nnCXqW), artículo `MLM6459824462`.
+
+| Dato | Lo que muestra la publicación |
+| --- | --- |
+| Título | Gabinete de pared 19" 12U, rack o bastidor |
+| Medida en la foto | 600 × 600 × 600 mm, “Gabinete de redes 12U” |
+| Precio | $2,007.46 (tachado $4,599, 56% menos). IVA incluido |
+| Envío | Gratis, llega al día siguiente. +25 vendidos. Más vendido, 7° en gabinetes para servidores |
+| Foto | Gabinete cerrado, puerta de cristal, parece llevar ruedas. Foto 2 de 12, estilo catálogo |
+
+Veredicto: **sí, en lugar del StarTech RK12OD, solo si el vendedor confirma cuatro cosas.** El fondo de 600 mm le queda bien a un Catalyst (el chasis anda entre 280 y 370 mm). El RK12OD tiene unos 290 mm de base y el equipo sobresale. La torre del servidor no entra en 12U; se queda en el piso igual que con el rack abierto.
+
+Preguntas antes de pagar:
+
+1. El título dice “de pared” y la foto es de piso con ruedas. Cuál de los dos se envía.
+2. Rieles EIA de 19 pulgadas, tuercas enjauladas y tornillos incluidos.
+3. Las ruedas de la foto vienen en la caja.
+4. Costados perforados. Un 2960 sin PoE vive bien ahí. Un modelo PoE, dentro de una puerta de cristal, calienta y se oye más.
+
+Si esas cuatro salen bien, el gasto queda así: gabinete $2,007, cable FTDI unos $400, y cerca de **$2,090** para el switch. El precio de $4,599 tachado es el “antes” habitual de Mercado Libre; $2,007 es un precio normal de gabinete genérico, no una ganga. Sin respuesta sobre los rieles, no se paga.
